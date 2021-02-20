@@ -1,0 +1,103 @@
+[
+  {
+    "id": "101",
+    "pizzaType": "Veg",
+    "pizzaName": "Veg Exotica",
+    "price": {
+      "pan": "120",
+      "medium": "210",
+      "large": "310"
+    },
+    "toppings": [
+      "Baby Corn",
+      "Black Olives",
+      "Green Capsicum",
+      "Jalapeno",
+      "Red Capsicum"
+    ]
+  },
+  {
+    "id": "102",
+    "pizzaType": "Veg",
+    "pizzaName": "Veggie Supreme",
+    "price": {
+      "pan": "110",
+      "medium": "210",
+      "large": "300"
+    },
+    "toppings": [
+      "Black Olives",
+      "Green Capsicum",
+      "Mushroom",
+      "Onion",
+      "Red Paprika",
+      "Sweet Corn"
+    ]
+  },
+  {
+    "id": "103",
+    "pizzaType": "Veg",
+    "pizzaName": "Veggie Italiano",
+    "price": {
+      "pan": "120",
+      "medium": "200",
+      "large": "290"
+    },
+    "toppings": [
+      "Black Olives",
+      "Green And Yellow Zucchini",
+      "Jalapeno",
+      "Mushroom",
+      "Red Capsicum"
+    ]
+  },
+  {
+    "id": "104",
+    "pizzaType": "Veg",
+    "pizzaName": "Country Feast",
+    "price": {
+      "pan": "100",
+      "medium": "180",
+      "large": "280"
+    },
+    "toppings": [
+      "Herbed Onion & Green capsicum",
+      "Sweet Corn",
+      "Tomato",
+      "Mushroom"
+    ]
+  },
+  {
+    "id": "105",
+    "pizzaType": "Veg",
+    "pizzaName": "Farmers Pick",
+    "price": {
+      "pan": "110",
+      "medium": "190",
+      "large": "290"
+    },
+    "toppings": [
+      "Herbed Onion & Green Capsicum",
+      "Red Capsicum",
+      "Mushroom",
+      "Baby Corn"
+    ]
+  },
+  {
+    "id": "106",
+    "pizzaType": "Veg",
+    "pizzaName": "Veggie Lover",
+    "price": {
+      "pan": "100",
+      "medium": "180",
+      "large": "280"
+    },
+    "toppings": [
+      "Onion",
+      "Green Capsicum",
+      "Mushroom",
+      "Tomato",
+      "Red Paprika"
+    ]
+  }
+]

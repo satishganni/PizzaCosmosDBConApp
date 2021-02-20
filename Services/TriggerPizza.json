@@ -1,0 +1,17 @@
+{
+  "id": "1011",
+  "pizzaType": "Veg",
+  "pizzaName": "Veg Exotica",
+  "price": {
+    "pan": "120",
+    "medium": "180",
+    "large": "310"
+  },
+  "toppings": [
+    "Baby Corn",
+    "Black Olives",
+    "Green Capsicum",
+    "Jalapeno",
+    "Red Capsicum"
+  ]
+}

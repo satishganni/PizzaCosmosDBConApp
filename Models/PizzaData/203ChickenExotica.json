@@ -1,0 +1,16 @@
+{
+  "id": "203",
+  "pizzaType": "Non Veg",
+  "pizzaName": "Chicken Exotica",
+  "price": {
+    "pan": "120",
+    "medium": "200",
+    "large": "320"
+  },
+  "toppings": [
+    "Chicken Pepperoni",
+    "Green And Yellow Zucchini",
+    "Jalapeno",
+    "Smoked Chicken"
+  ]
+}

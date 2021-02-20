@@ -1,0 +1,15 @@
+{
+  "id": "204",
+  "pizzaType": "Non Veg",
+  "pizzaName": "Smoked Chicken",
+  "price": {
+    "pan": "110",
+    "medium": "190",
+    "large": "270"
+  },
+  "toppings": [
+    "Jalapeno",
+    "Red Capsicum",
+    "Smoked Chicken"
+  ]
+}

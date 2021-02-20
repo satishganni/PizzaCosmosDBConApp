@@ -1,0 +1,17 @@
+{
+  "id": "202",
+  "pizzaType": "Non Veg",
+  "pizzaName": "Chicken Italiano",
+  "price": {
+    "pan": "150",
+    "medium": "210",
+    "large": "340"
+  },
+  "toppings": [
+    "Black Olives",
+    "Chicken Pepperoni",
+    "Chicken Sausage",
+    "Green Capsicum",
+    "Mushroom"
+  ]
+}

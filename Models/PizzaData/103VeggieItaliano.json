@@ -1,0 +1,17 @@
+{
+  "id": "103",
+  "pizzaType": "Veg",
+  "pizzaName": "Veggie Italiano",
+  "price": {
+    "pan": "120",
+    "medium": "200",
+    "large": "290"
+  },
+  "toppings": [
+    "Black Olives",
+    "Green And Yellow Zucchini",
+    "Jalapeno",
+    "Mushroom",
+    "Red Capsicum"
+  ]
+}

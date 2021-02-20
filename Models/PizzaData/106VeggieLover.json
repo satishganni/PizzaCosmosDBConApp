@@ -1,0 +1,17 @@
+{
+  "id": "106",
+  "pizzaType": "Veg",
+  "pizzaName": "Veggie Lover",
+  "price": {
+    "pan": "100",
+    "medium": "180",
+    "large": "280"
+  },
+  "toppings": [
+    "Onion",
+    "Green Capsicum",
+    "Mushroom",
+    "Tomato",
+    "Red Paprika"
+  ]
+}

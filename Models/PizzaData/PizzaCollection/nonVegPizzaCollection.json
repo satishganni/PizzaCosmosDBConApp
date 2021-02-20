@@ -1,0 +1,53 @@
+[
+  {
+    "id": "201",
+    "pizzaType": "Non Veg",
+    "pizzaName": "Triple Chicken Feast",
+    "price": {
+      "pan": "160",
+      "medium": "230",
+      "large": "350"
+    },
+    "toppings": [
+      "Schezwan Chicken Meatball",
+      "Herbed Chicken",
+      "Chicken Sausage",
+      "Green Capsicum",
+      "Onion",
+      "Red Paprika"
+    ]
+  },
+  {
+    "id": "202",
+    "pizzaType": "Non Veg",
+    "pizzaName": "Chicken Italiano",
+    "price": {
+      "pan": "150",
+      "medium": "210",
+      "large": "340"
+    },
+    "toppings": [
+      "Black Olives",
+      "Chicken Pepperoni",
+      "Chicken Sausage",
+      "Green Capsicum",
+      "Mushroom"
+    ]
+  },
+  {
+    "id": "203",
+    "pizzaType": "Non Veg",
+    "pizzaName": "Chicken Exotica",
+    "price": {
+      "pan": "120",
+      "medium": "200",
+      "large": "320"
+    },
+    "toppings": [
+      "Chicken Pepperoni",
+      "Green And Yellow Zucchini",
+      "Jalapeno",
+      "Smoked Chicken"
+    ]
+  }
+]

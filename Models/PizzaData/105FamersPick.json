@@ -1,0 +1,16 @@
+{
+  "id": "105",
+  "pizzaType": "Veg",
+  "pizzaName": "Farmers Pick",
+  "price": {
+    "pan": "110",
+    "medium": "190",
+    "large": "290"
+  },
+  "toppings": [
+    "Herbed Onion & Green Capsicum",
+    "Red Capsicum",
+    "Mushroom",
+    "Baby Corn"
+  ]
+}

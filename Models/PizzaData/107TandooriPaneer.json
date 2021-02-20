@@ -1,0 +1,16 @@
+{
+  "id": "107",
+  "pizzaType": "Veg",
+  "pizzaName": "Tandoori Paneer",
+  "price": {
+    "pan": "130",
+    "medium": "220",
+    "large": "320"
+  },
+  "toppings": [
+    "Spiced paneer",
+    "Onion",
+    "Green Capsicum",
+    "Red Paprika in Tandoori Sauce"
+  ]
+}

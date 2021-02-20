@@ -1,0 +1,16 @@
+{
+  "id": "104",
+  "pizzaType": "Veg",
+  "pizzaName": "Country Feast",
+  "price": {
+    "pan": "100",
+    "medium": "180",
+    "large": "280"
+  },
+  "toppings": [
+    "Herbed Onion & Green capsicum",
+    "Sweet Corn",
+    "Tomato",
+    "Mushroom"
+  ]
+}

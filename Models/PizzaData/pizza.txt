@@ -1,0 +1,44 @@
+{
+  "id": "",
+  "pizzaType": "",
+  "pizzaName": "",
+  "price": {
+    "pan": "",
+    "medium": "",
+    "large": ""
+  },
+  "toppings": []
+}
+
+Veg Exotica
+Baby Corn, Black Olives, Green Capsicum, Jalapeno, Red Capsicum
+
+Veggie Supreme
+Black Olives, Green Capsicum, Mushroom, Onion, Red Paprika, Sweet Corn
+
+Veggie Italiano
+Black Olives, Green And Yellow Zucchini, Jalapeno, Mushroom, Red Capsicum
+
+Country Feast
+Herbed Onion & Green capsicum, Sweet Corn, Tomato, Mushroom
+
+Farmers Pick
+Herbed Onion & Green Capsicum, Red Capsicum, Mushroom, Baby Corn
+
+Veggie Lover
+Onion, Green Capsicum, Mushroom, Tomato, Red Paprika
+
+Tandoori Paneer
+Spiced paneer, Onion, Green Capsicum & Red Paprika in Tandoori Sauce
+
+Triple Chicken Feast
+Schezwan Chicken Meatball, Herbed Chicken, Chicken Sausage, Green Capsicum, Onion, Red Paprika
+
+Chicken Italiano
+Black Olives, Chicken Pepperoni, Chicken Sausage, Green Capsicum, Mushroom
+
+Chicken Exotica
+Chicken Pepperoni, Green And Yellow Zucchini, Jalapeno, Smoked Chicken
+
+Smoked Chicken
+Jalapeno, Red Capsicum, Smoked Chicken

@@ -1,0 +1,18 @@
+{
+  "id": "102",
+  "pizzaType": "Veg",
+  "pizzaName": "Veggie Supreme",
+  "price": {
+    "pan": "110",
+    "medium": "210",
+    "large": "300"
+  },
+  "toppings": [
+    "Black Olives",
+    "Green Capsicum",
+    "Mushroom",
+    "Onion",
+    "Red Paprika",
+    "Sweet Corn"
+  ]
+}
