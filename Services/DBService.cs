@@ -55,8 +55,49 @@ namespace PizzaCosmosDBConApp.Services
       return false;
     }
 
-    public void DatabaseName() => WriteLine($"Database Name/Id: {_database.Id}");
-    public void ContainerName() => WriteLine($"Container Name/Id: {_container.Id}");
+    public void DatabaseName()
+    {
+      _database = _cosmosClient.GetDatabase(_databaseId);
+      WriteLine($"Database Name/Id: {_database.Id}");
+    }
+    public void ContainerName()
+    {
+      _container = _database.GetContainer(_containerId);
+      WriteLine($"Container Name/Id: {_container.Id}");
+    }
 
+    public async Task GetAllDatabases()
+    {
+      string message = "Get all databases";
+      var queryText = "Select * from c";
+      using (FeedIterator<DatabaseProperties> feedIterator = _cosmosClient.GetDatabaseQueryIterator<DatabaseProperties>(queryText))
+      {
+        FeedResponse<DatabaseProperties> response = await feedIterator.ReadNextAsync();
+        Printer.PrintLine(message: message);
+        foreach (var item in response)
+        {
+          WriteLine($"Database details, Id: {item.Id}, ETag: {item.ETag}, \n\tSelfLink: {item.SelfLink}");
+        }
+        Printer.PrintLine(noOfTimes: (100 + message.Length));
+      }
+    }
+
+    public async Task GetAllContainers()
+    {
+      string message = "Get all containers";
+      using (FeedIterator<ContainerProperties> feedIterator = _database.GetContainerQueryIterator<ContainerProperties>())
+      {
+        while (feedIterator.HasMoreResults)
+        {
+          Printer.PrintLine(message: message);
+          FeedResponse<ContainerProperties> response = await feedIterator.ReadNextAsync();
+          foreach (var item in response)
+          {
+            WriteLine($"Container Details, Id: {item.Id}, PartitionKeyDefinitionVersion: {item.PartitionKeyDefinitionVersion ?? 0}, PartitionKeyPath: {item.PartitionKeyPath}, \n\tSelfLink: {item.SelfLink}");
+          }
+          Printer.PrintLine(noOfTimes: (100 + message.Length));
+        }
+      }
+    }
   }
 }
