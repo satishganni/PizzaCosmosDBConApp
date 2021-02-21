@@ -42,8 +42,8 @@ namespace PizzaCosmosDBConApp
       IConfiguration configuration = BuildConfiguration(args);
       ServiceProvider serviceProvider = ConfigureService(configuration);
 
-      await DatabaseCalls(configuration, serviceProvider);
-      // await StoredProcedureCalls(configuration, serviceProvider);
+      // await DatabaseCalls(configuration, serviceProvider);
+      await StoredProcedureCalls(configuration, serviceProvider);
       // await TriggerCalls(configuration, serviceProvider);
       // await UDCalls(configuration, serviceProvider);
     }
@@ -61,6 +61,20 @@ namespace PizzaCosmosDBConApp
     private static async Task StoredProcedureCalls(IConfiguration configuration, ServiceProvider serviceProvider)
     {
       var databaseId = "pizzaDB"; var containerId = "pizzaHut";
+      SPService spService = serviceProvider.GetService<SPService>();
+      spService.SetContainer(databaseId, containerId);
+      // await spService.ViewStoredProcedures();
+      try
+      {
+        // await spService.CreateStoredProcedure("Greetings");
+        await spService.ExecuteSPGreeting("Batman");
+
+        // await spService.ViewStoredProcedures();
+      }
+      catch (Exception ex)
+      {
+        WriteLine(ex.ToString());
+      }
     }
 
     private static async Task DatabaseCalls(IConfiguration configuration, ServiceProvider serviceProvider)

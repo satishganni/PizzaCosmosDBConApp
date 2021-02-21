@@ -7,4 +7,9 @@
  */
 
 function Greetings(name) {
+  let context = getContext();
+  let response = context.getResponse();
+
+  var greetings = 'Welcome to CosmosDB, ' + name;
+  response.setBody(greetings);
 }
