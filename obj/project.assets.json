@@ -1511,20 +1511,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Maheshkumar\\.nuget\\packages\\": {}
+    "C:\\Users\\Phantom\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Storage\\AZ204\\ForGithub\\PizzaCosmosDBConApp\\PizzaCosmosDBConApp.csproj",
+      "projectUniqueName": "C:\\MN\\PizzaCosmosDBConApp\\PizzaCosmosDBConApp.csproj",
       "projectName": "PizzaCosmosDBConApp",
-      "projectPath": "D:\\Storage\\AZ204\\ForGithub\\PizzaCosmosDBConApp\\PizzaCosmosDBConApp.csproj",
-      "packagesPath": "C:\\Users\\Maheshkumar\\.nuget\\packages\\",
-      "outputPath": "D:\\Storage\\AZ204\\ForGithub\\PizzaCosmosDBConApp\\obj\\",
+      "projectPath": "C:\\MN\\PizzaCosmosDBConApp\\PizzaCosmosDBConApp.csproj",
+      "packagesPath": "C:\\Users\\Phantom\\.nuget\\packages\\",
+      "outputPath": "C:\\MN\\PizzaCosmosDBConApp\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Maheshkumar\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Phantom\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"

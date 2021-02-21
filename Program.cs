@@ -42,7 +42,7 @@ namespace PizzaCosmosDBConApp
       IConfiguration configuration = BuildConfiguration(args);
       ServiceProvider serviceProvider = ConfigureService(configuration);
 
-      // await DatabaseCalls(configuration, serviceProvider);
+      await DatabaseCalls(configuration, serviceProvider);
       // await StoredProcedureCalls(configuration, serviceProvider);
       // await TriggerCalls(configuration, serviceProvider);
       // await UDCalls(configuration, serviceProvider);
