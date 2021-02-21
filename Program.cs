@@ -65,6 +65,13 @@ namespace PizzaCosmosDBConApp
 
     private static async Task DatabaseCalls(IConfiguration configuration, ServiceProvider serviceProvider)
     {
+      DBService dbService = serviceProvider.GetService<DBService>();
+      dbService.SetIds(databaseId: "pizzaDB", containerId: "pizzaHut", partitionName: "pizzaType");
+      await dbService.CreateDatabase();
+      await dbService.CreateContainer();
+
+      dbService.DatabaseName();
+      dbService.ContainerName();
     }
   }
 }
