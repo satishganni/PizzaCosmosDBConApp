@@ -67,7 +67,25 @@ namespace PizzaCosmosDBConApp
       try
       {
         // await spService.CreateStoredProcedure("Greetings");
-        await spService.ExecuteSPGreeting("Batman");
+        // await spService.ExecuteSPGreeting("Batman");
+
+        // await spService.CreateStoredProcedure("CreateNewPizza");
+        // await spService.ExecuteSPCreateNewPizza("Veg", "107TandooriPaneer");
+        // await spService.ExecuteSPCreateNewPizza("Non Veg", "204SmokedChicken");
+
+        // await spService.CreateStoredProcedure("BulkPizzaCreate");
+        // await spService.ExecuteSPBulkPizzaCreate("veg", "Veg");
+        // await spService.ExecuteSPBulkPizzaCreate("nonVeg", "Non Veg");
+        // await spService.DeleteStoreProcedure("BulkPizzaCreate");
+
+        // await spService.CreateStoredProcedure("GetPizzaById");
+        // await spService.ExecuteSPGetPizzaById("Veg", "106");
+        // await spService.ExecuteSPGetPizzaById("Non Veg", "201");
+        // await spService.DeleteStoreProcedure("GetPizzaById");
+
+        // await spService.CreateStoredProcedure("GetPizzaCount");
+
+        // await spService.DeleteStoreProcedure("GetPizzaCount");
 
         // await spService.ViewStoredProcedures();
       }

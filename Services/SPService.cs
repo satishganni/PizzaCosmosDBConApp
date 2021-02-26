@@ -79,5 +79,38 @@ namespace PizzaCosmosDBConApp.Services
       WriteLine($"SP Greeting Result: {sprocResponse.Resource}");
       Printer.PrintLine(noOfTimes: (101 + message.Length));
     }
+
+    public async Task ExecuteSPCreateNewPizza(string pizzaType, string pizzaFileName)
+    {
+      string newPizza = File.ReadAllText($"Models/PizzaData/{pizzaFileName}.json");
+      string message = "Execute SPCreateNewPizza";
+      Printer.PrintLine(message: message);
+      Scripts scripts = _container.Scripts;
+      StoredProcedureExecuteResponse<string> sprocResponse = await scripts.ExecuteStoredProcedureAsync<string>("CreateNewPizza", new PartitionKey(pizzaType), new dynamic[] { newPizza });
+      WriteLine($"SP Create New Pizza Result: \n{JsonConvert.DeserializeObject(sprocResponse.Resource)}");
+      Printer.PrintLine(noOfTimes: (100 + message.Length));
+    }
+
+    public async Task ExecuteSPBulkPizzaCreate(string pizzaFile, string partitionKey)
+    {
+      var jsonArray = JArray.Parse(File.ReadAllText($@"Models/PizzaData/PizzaCollection/{pizzaFile}PizzaCollection.json"));
+      string message = "Execute SPBulkPizzaCreate";
+      Printer.PrintLine(message: message);
+      Scripts scripts = _container.Scripts;
+      StoredProcedureExecuteResponse<string> sprocResponse = await scripts.ExecuteStoredProcedureAsync<string>("BulkPizzaCreate", new PartitionKey($"{partitionKey}"), new dynamic[] { jsonArray });
+      WriteLine($"SP Bulk Pizza Create Result: \n{JsonConvert.DeserializeObject(sprocResponse.Resource)}");
+      Printer.PrintLine(noOfTimes: (100 + message.Length));
+    }
+
+    public async Task ExecuteSPGetPizzaById(string pizzaType, string pizzaId)
+    {
+      string message = "Execute SPGetPizzaById";
+      Printer.PrintLine(message: message);
+      Scripts scripts = _container.Scripts;
+      StoredProcedureExecuteResponse<string> sprcoResponse = await scripts.ExecuteStoredProcedureAsync<string>("GetPizzaById", new PartitionKey(pizzaType), new dynamic[] { pizzaId });
+      WriteLine($"SP GetPizzaById Result: \n{JsonConvert.DeserializeObject(sprcoResponse.Resource)}");
+      Printer.PrintLine(noOfTimes: (100 + message.Length));
+    }
+
   }
 }
