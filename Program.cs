@@ -44,13 +44,26 @@ namespace PizzaCosmosDBConApp
 
       // await DatabaseCalls(configuration, serviceProvider);
       // await StoredProcedureCalls(configuration, serviceProvider);
-      await TriggerCalls(configuration, serviceProvider);
-      // await UDCalls(configuration, serviceProvider);
+      // await TriggerCalls(configuration, serviceProvider);
+      await UDCalls(configuration, serviceProvider);
     }
 
     private static async Task UDCalls(IConfiguration configuration, ServiceProvider serviceProvider)
     {
       var databaseId = "pizzaDB"; var containerId = "pizzaHut";
+      UDFService uDFService = serviceProvider.GetService<UDFService>();
+      uDFService.SetContainer(databaseId, containerId);
+
+      try
+      {
+        await uDFService.CreateUDF("ToppingsCountUDF");
+        await uDFService.ExecuteUDF();
+        await uDFService.ViewUserDefinedFunctions();
+      }
+      catch (Exception ex)
+      {
+        WriteLine(ex.ToString());
+      }
     }
 
     private static async Task TriggerCalls(IConfiguration configuration, ServiceProvider serviceProvider)

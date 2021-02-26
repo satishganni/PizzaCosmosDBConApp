@@ -3,4 +3,6 @@
 */
 
 function ToppingsCountUDF(toppings) {
+  var toppingsLength = toppings.length;
+  return toppingsLength;
 }
