@@ -63,15 +63,17 @@ namespace PizzaCosmosDBConApp
       var databaseId = "pizzaDB"; var containerId = "pizzaHut";
       SPService spService = serviceProvider.GetService<SPService>();
       spService.SetContainer(databaseId, containerId);
-      // await spService.ViewStoredProcedures();
+      await spService.ViewStoredProcedures();
       try
       {
         // await spService.CreateStoredProcedure("Greetings");
         // await spService.ExecuteSPGreeting("Batman");
+        // await spService.DeleteStoreProcedure("Greetings");
 
         // await spService.CreateStoredProcedure("CreateNewPizza");
         // await spService.ExecuteSPCreateNewPizza("Veg", "107TandooriPaneer");
         // await spService.ExecuteSPCreateNewPizza("Non Veg", "204SmokedChicken");
+        // await spService.DeleteStoreProcedure("CreateNewPizza");
 
         // await spService.CreateStoredProcedure("BulkPizzaCreate");
         // await spService.ExecuteSPBulkPizzaCreate("veg", "Veg");
@@ -84,8 +86,18 @@ namespace PizzaCosmosDBConApp
         // await spService.DeleteStoreProcedure("GetPizzaById");
 
         // await spService.CreateStoredProcedure("GetPizzaCount");
-
+        // await spService.ExecuteGetPizzaCount("Veg");
+        // await spService.ExecuteGetPizzaCount("Non Veg");
         // await spService.DeleteStoreProcedure("GetPizzaCount");
+
+        // await spService.CreateStoredProcedure("GetPizzas");
+        // await spService.ExecuteSPGetPizzas();
+        // await spService.DeleteStoreProcedure("GetPizzas");
+
+        // await spService.CreateStoredProcedure("DeletePizza");
+        // await spService.ExecuteSPDeletePizza("Veg", "107");
+        // await spService.ExecuteSPDeletePizza("Non Veg", "204");
+        // await spService.DeleteStoreProcedure("DeletePizza");
 
         // await spService.ViewStoredProcedures();
       }
