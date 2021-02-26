@@ -112,5 +112,40 @@ namespace PizzaCosmosDBConApp.Services
       Printer.PrintLine(noOfTimes: (100 + message.Length));
     }
 
+
+    public async Task ExecuteGetPizzaCount(string partitionKey)
+    {
+      string message = "Execute GetPizzaCount";
+      Printer.PrintLine(message: message);
+      Scripts scripts = _container.Scripts;
+      StoredProcedureExecuteResponse<string> sprocResponse = await scripts.ExecuteStoredProcedureAsync<string>("GetPizzaCount", new PartitionKey($"{partitionKey}"), new dynamic[] { });
+      WriteLine($"SP GetPizzaCount Result: {JsonConvert.DeserializeObject(sprocResponse.Resource)}");
+      Printer.PrintLine(noOfTimes: (101 + message.Length));
+    }
+
+    public async Task ExecuteSPGetPizzas(string pizzaType = "Veg", decimal price = 300)
+    {
+      string message = "Execute SPGetPizzas";
+      Printer.PrintLine(message: message);
+      Scripts scripts = _container.Scripts;
+      StoredProcedureExecuteResponse<string> sprocResponse = await scripts.ExecuteStoredProcedureAsync<string>("GetPizzas", new PartitionKey(pizzaType), new dynamic[] { pizzaType, price });
+      // StoredProcedureExecuteResponse<string> sprocResponse = await scripts.ExecuteStoredProcedureAsync<string>("GetPizzas", new PartitionKey(pizzaType), new dynamic[] { pizzaType });
+      // StoredProcedureExecuteResponse<string> sprocResponse = await scripts.ExecuteStoredProcedureAsync<string>("GetPizzas", new PartitionKey(pizzaType), new dynamic[] { });
+
+      WriteLine($"SP Get VegPizza Result: \n{JsonConvert.DeserializeObject(sprocResponse.Resource)}");
+      Printer.PrintLine(noOfTimes: (101 + message.Length));
+    }
+
+    public async Task ExecuteSPDeletePizza(string pizzaType, string pizzaId)
+    {
+      string message = "Execute SPDeletePizza";
+      Printer.PrintLine(message: message);
+      Scripts scripts = _container.Scripts;
+      StoredProcedureExecuteResponse<string> sprocResponse = await scripts.ExecuteStoredProcedureAsync<string>("DeletePizza", new PartitionKey(pizzaType), new dynamic[] { pizzaId });
+      WriteLine($"SP DeletePizza Result: \n{JsonConvert.DeserializeObject(sprocResponse.Resource)}");
+      Printer.PrintLine(noOfTimes: (101 + message.Length));
+    }
+
+
   }
 }
